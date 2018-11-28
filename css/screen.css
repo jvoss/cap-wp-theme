@@ -89,6 +89,30 @@ body{
 	margin:48px 0px 0px 25px;
 }
 
+.orgContainer{
+	float: left;
+	color: #f6bf22;
+	width: 350px;
+	height: 120px;
+	display: flex;
+	flex-direction: column;
+	text-transform: uppercase;
+	margin: 0px 0px 0px 10px;
+	justify-content: center;
+}
+
+.orgTitle{
+	float:left;
+	font-size: 42px;
+	font-family: 'Roboto', Arial, Helvetica, sans-serif;
+	line-height: 32px;
+}
+
+.orgDescription{
+	font-size: 14px;
+	font-weight: bold;
+	display: table-caption;
+}
 
 .servings{
 	float:right;
@@ -197,10 +221,20 @@ body{
 	border-top-right-radius: 9px;
 
 	border-bottom:1px solid #4370a4;
+
+	background: rgb(9,59,120);
+	background: -moz-linear-gradient(top,  rgba(9,59,120,1) 1%, rgba(39,89,149,1) 88%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,rgba(9,59,120,1)), color-stop(88%,rgba(39,89,149,1))); /
+background: -webkit-linear-gradient(top,  rgba(9,59,120,1) 1%,rgba(39,89,149,1) 88%);
+	background: -o-linear-gradient(top,  rgba(9,59,120,1) 1%,rgba(39,89,149,1) 88%);
+	background: -ms-linear-gradient(top,  rgba(9,59,120,1) 1%,rgba(39,89,149,1) 88%);
+	background: linear-gradient(to bottom,  rgba(9,59,120,1) 1%,rgba(39,89,149,1) 88%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#093b78', endColorstr='#275995',GradientType=0 );
 }
 
 #mainNavigation ul li a:hover,
-#mainNavigation ul li a.selected{
+#mainNavigation ul li a.selected,
+#mainNavigation .current-menu-item a{
 	height: 31px;
 	padding:14px 33px 0px 33px;
 	color:#f6bf22;
@@ -208,15 +242,6 @@ body{
 	border-left:1px solid #194a84;
 	border-right:1px solid #193e6b;
 	border-top:1px solid #255187;
-
-	background: rgb(9,59,120);
-	background: -moz-linear-gradient(top,  rgba(9,59,120,1) 1%, rgba(39,89,149,1) 88%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,rgba(9,59,120,1)), color-stop(88%,rgba(39,89,149,1))); /
-	background: -webkit-linear-gradient(top,  rgba(9,59,120,1) 1%,rgba(39,89,149,1) 88%);
-	background: -o-linear-gradient(top,  rgba(9,59,120,1) 1%,rgba(39,89,149,1) 88%);
-	background: -ms-linear-gradient(top,  rgba(9,59,120,1) 1%,rgba(39,89,149,1) 88%);
-	background: linear-gradient(to bottom,  rgba(9,59,120,1) 1%,rgba(39,89,149,1) 88%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#093b78', endColorstr='#275995',GradientType=0 );
 }
 
 .search{
@@ -266,12 +291,23 @@ body{
 /***********************************************************************************************************************************/
 /************************** inside content *************************************************************************************************/
 /***********************************************************************************************************************************/
-.slideshow{
+.slideshow,
+.flexslider .slides img{
 	width:1024px;
 	height: 342px;
 	position: relative;
 	overflow: hidden;
 	margin-top:-29px;
+}
+
+.slideshow p{
+	display: flex;
+	flex-direction: column;
+	font-weight: bold;
+	align-items: center;
+	height: 342px;
+	color: #f6bf22;
+	justify-content: center;
 }
 
 .slideshow img{
@@ -365,12 +401,13 @@ body{
 }
 
 .leftColumn ul li a:hover,
-.leftColumn ul li a.selected{
+.leftColumn ul li a.selected,
+.leftColumn .current-menu-item a{
 	color:#f6bf22;
 }
 
 .leftColumn ul li a span{
-	margin:0px 0px 0px 8px;
+	margin:0px 0px 0px 0px;
 	display: inline-block;
 	width: 223px;
 	float:left;
@@ -384,11 +421,12 @@ body{
 	height: 6px;
 	background-position: 0px 0px;
 	display: inline-block;
-	margin:5px 0px 0px 0px;
+	margin:5px 5px 0px 0px;
 }
 
 .leftColumn ul li a:hover .arrow,
-.leftColumn ul li a.selected .arrow{
+.leftColumn ul li a.selected .arrow,
+.leftColumn .current-menu-item a .arrow{
 	background-position: 0px -6px;
 }
 
@@ -466,14 +504,14 @@ body{
 	line-height: 20px;
 }
 
-.foorerBox1{
+.footerBox1{
 	float:left;
 	width:234px;
 	margin:68px 0px 0px 0px;
 	padding:0px 0px 0px 22px;
 }
 
-.foorerBox1 a{
+.footerBox1 a{
 	background-image:url(../images/social-media.png);
 	background-repeat: no-repeat;
 	width:32px;
@@ -487,64 +525,64 @@ body{
 	margin-top:11px;
 }
 
-.foorerBox1 a.fb{
+.footerBox1 a.fb{
 	width:33px;
 	background-position: 0px 0px;
 }
 
-.foorerBox1 a.twitter{
+.footerBox1 a.twitter{
 	background-position: -41px 0px;
 }
 
-.foorerBox1 a.youtube{
+.footerBox1 a.youtube{
 	background-position: -82px 0px;
 }
 
-.foorerBox1 a.linkedin{
+.footerBox1 a.linkedin{
 	width:33px;
 	background-position: -123px 0px;
 }
 
-.foorerBox1 a.googlePlus{
+.footerBox1 a.googlePlus{
 	width:33px;
 	background-position: -165px 0px;
 }
 
-.foorerBox2{
+.footerBox2{
 	float:left;
 	width:218px;
 	margin:68px 0px 0px 0px;
 	padding:0px 14px 0px 24px;
 }
 
-.foorerBox3{
+.footerBox3{
 	float:left;
 	width:220px;
 	margin:68px 0px 0px 0px;
 	padding:0px 14px 0px 22px;
 }
 
-.foorerBox4{
+.footerBox4{
 	float:left;
 	width:235px;
 	margin:68px 0px 0px 0px;
 	padding:0px 0px 0px 25px;
 }
 
-.foorerBox4 ul{
+.footerBox4 ul{
 	margin:0px 0px 0px 0px;
 	padding:0px;
 	list-style-type: none;
 }
 
-.foorerBox4 ul li{
+.footerBox4 ul li{
 	margin:0px;
 	padding:0px;
 	font-size:14px;
 	line-height: 20px;
 }
 
-.foorerBox4 ul li a{
+.footerBox4 ul li a{
 	font-family: 'RobotoRegular', Arial, Helvetica, sans-serif;
 	font-size:14px;
 	line-height: 15px;
@@ -555,12 +593,12 @@ body{
 	display: inline-block;
 }
 
-.foorerBox4 ul li a:hover,
-.foorerBox4 ul li a.selected{
+.footerBox4 ul li a:hover,
+.footerBox4 ul li a.selected{
 	color:#f6bf22;
 }
 
-.foorerBox4 ul li a .arrow{
+.footerBox4 ul li a .arrow{
 	background-image:url(../images/ic-arrows.png);
 	background-repeat: no-repeat;
 	width: 4px;
@@ -571,12 +609,12 @@ body{
 	margin:4px 0px 0px 0px;
 }
 
-.foorerBox4 ul li a:hover .arrow,
-.foorerBox4 ul li a.selected .arrow{
+.footerBox4 ul li a:hover .arrow,
+.footerBox4 ul li a.selected .arrow{
 	background-position: 0px -6px;
 }
 
-.foorerBox4 ul li a span{
+.footerBox4 ul li a span{
 	padding:0px 0px 0px 8px;
 	float: left;
 }
@@ -589,7 +627,7 @@ body{
 	margin:0px 0px 7px 0px;
 }
 
-.foorerBox5{
+.footerBox5{
 	width: 100%;
 	border-top:1px solid #305d95;
 	float: left;
@@ -597,12 +635,12 @@ body{
 	padding:21px 0px 0px 0px;
 }
 
-.coyright{
+.copyright{
 	float:left;
 	margin:0px 0px 0px 22px;
 }
 
-#footer .coyright p{
+#footer .copyright p{
 	color:#ffffff;
 	font-size:12px;
 	line-height: 14px;
@@ -616,9 +654,22 @@ body{
 }
 
 #footer .footerLinks ul{
+	display: inline-block;
 	margin:0px;
 	padding:0px;
 	list-style-type: none;
+}
+
+#footer .footerLinks #menu-footer{
+	float: left;
+}
+
+#footer .footerLinks #top-ul{
+	float: right;
+}
+
+#footer .footerLinks #footer-perm-links{
+	float: left;
 }
 
 #footer .footerLinks ul li{
@@ -650,8 +701,20 @@ body{
 	color:#f6bf22;
 }
 
+#footer a{
+	color:#fff;
+}
+
+#footer a:hover{
+	color:#f6bf22;
+}
+
 #footer .footerLinks ul li.top{
 	padding-left:14px;
+}
+
+#footer .footerLinks ul.top{
+	float: right;
 }
 
 #footer .footerLinks ul li.top a{
@@ -661,4 +724,18 @@ body{
 	color:#4278ba;
 	font-size: 12px;
 	line-height: 14px;
+}
+
+#footer .footerLinks ul li:before {
+	content: "\007c";
+	display: inline-block;
+	/*margin-left: 5px;*/
+	/*margin-right: 8px;*/
+	padding:0px 4px 0px 4px;
+}
+
+#footer .footerLinks ul li:first-child:before,
+#footer .footerLinks .children li:before {
+	content: "";
+	display: none;
 }

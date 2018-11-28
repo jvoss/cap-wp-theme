@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- Version 3.4 CAP template update for Group IV, TX, SWR, 28NOV18, 1st Lt Jonathan Voss, CAP  -->
 <!-- Version 3.3 CAP template for UTWG 30Mar17, questions send to rbowden@cap.gov  -->
 <html>
 	<head>
@@ -11,24 +12,9 @@
 		<link rel="icon" type="image/ico" href="<?php print get_template_directory_uri(); ?>/favicon.ico">
 		<link media="all" type="text/css" href="<?php print get_template_directory_uri(); ?>/style.css" rel="stylesheet">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<!-- Google Analytics -->
-<!-- End Google Analytics -->	
-
-<!-- exit popup script -->
-<script>
-jQuery(function() {
-function leave_now(event) {
-    var choice = window.confirm( 'Note: this link will open a new browser window and leave the .GOV domain. Do you wish to continue?' ); //Change popup text to what you like
-    return choice;
-}
-
-var select_external = 'a[href*="//"]:not([href*=".gov"])';
-jQuery(document).on( 'click', select_external, leave_now )
-});
-</script>
-<!-- end exit popup script -->
-
-</head>
+        <!-- Google Analytics -->
+        <!-- End Google Analytics -->
+    </head>
 
 	<body>
 		<div id="printHeader">
@@ -36,36 +22,46 @@ jQuery(document).on( 'click', select_external, leave_now )
 		</div>
 
 		<div id="bodyContainer">
-
 			<div class="page">
-
 				<div id="header">
 					<div id="logo">
 						<a href="/" name="top"><img src="<?php print get_template_directory_uri(); ?>/images/logo.png"  width="362" height="127" alt="Civil Air Patrol"></a>
 					</div>
+
 					<div class="headerDivider"></div>
-					<div class="nevadaWing">
-					<!--<?php echo get_bloginfo ( 'title' ); ?> -->
-					<span style='font-size: 28px; font-weight:bold'><center>NAME <br>Composite Squadron</center></span>
+
+					<div class="orgContainer">
+					    <div class="orgTitle">
+                            <?php echo get_bloginfo ( 'title' ); ?>
+                        </div>
+                        <div class="orgDescription">
+                            <?php echo get_bloginfo ( 'description' ); ?>
+                        </div>
 					</div>
+
 					<div class="servings">
 						<span class="servingsTitle">Citizens Serving <br/> Communities</span>
-						<ul>
-							<li>
-								<a href="http://www.gocivilairpatrol.com"><span class="arrow"></span><span>CAP Home</span></a>
-							</li>
-							<li>
-								<a href="http://hosted.where2getit.com/civilairpatrol/index.html?form=locator_search&addressline=+++&postalcode=&city=&state=+&search"><span class="arrow"></span><span>Find a Squadron in Michigan</span></a>
-							</li>
-						</ul>
+
+                        <?php if ( has_nav_menu( 'top-right-menu' ) ) : ?>
+                            <?php wp_nav_menu( array('menu' => 'Top Right Menu', 'theme_location' => 'top-right-menu', 'link_before' => '<span class="arrow"></span><span/>' ) ); ?>
+                        <?php else: ?>
+                            <ul>
+                                <li><a href="#"><span class="arrow"></span><span>Please create a top right menu</a></li>
+                                <li><a href="#"><span class="arrow"></span><span>Two links are the maximum here</a></li>
+                            </ul>
+                        <?php endif; ?>
 					</div>
+
 					<div id="mainNavigation">
-						<ul>
-							<li><a href="/join" title="Join Civil Air Patrol" class="selected">Join CAP</a></li> <!--/home url-->
-							<li><a href="http://utwg.cap.gov" title="Utah Wing Website" class="selected">Wing Website</a></li> <!--/Location of desired page or link -->
-							<li><a href="http://www.cap75th.com/" title="CAP75th " class="selected">75th Anniversary </a></li> <!--/Location of desired page or link -->	
-							<li><a href="http://www.utwg.cap.gov/donate/" title="Donate" class="selected">Donate</a></li>  <!--/Location of desired page or link -->
-						</ul>
+					    <?php if ( has_nav_menu( 'tab-menu' ) ) : ?>
+                            <?php wp_nav_menu( array('menu' => 'tab-menu', 'theme_location' => 'tab-menu') ); ?>
+                        <?php else: ?>
+                            <ul>
+                                <li><a href="/">Home</a></li>
+                                <li><a href="#">This is the Tab Menu</a></li>
+                            </ul>
+                        <?php endif; ?>
+
 						<div class="search">
 							<form action="/" method="get">
 								<input type="text" id="s" name="s" class="searchInput" placeholder="Search..." value="<?php the_search_query(); ?>" />
@@ -77,16 +73,38 @@ jQuery(document).on( 'click', select_external, leave_now )
 
 				<div id="pageContent">
 					<div class="contentBorder"></div>
+
 					<div id="content">
 						<div class="slideshowTop"></div>
+
 						<div class="slideshow">
-							<?php echo do_shortcode("[metaslider id=4]"); ?>
+						    <?php if ( is_active_sidebar( 'slide_show' ) ) : ?>
+                                <?php dynamic_sidebar( 'slide_show' ); ?>
+                            <?php else: ?>
+                                <p>
+                                    This is the Slide Show Widget.
+                                    We recommend using the MetaSlider plugin placed here.
+                                    Make sure images are 1024x342.
+                                </p>
+                            <?php endif; ?>
 						</div>
+
 						<div class="slideshowBottom"></div>
 
 						<div class="mainContent">
 							<div class="leftColumn">
-								<?php wp_nav_menu( array('menu' => 'Main Menu', 'menu_id' => 'nav_options')); ?>
+							    <?php if ( has_nav_menu( 'main-menu' ) ) : ?>
+								    <?php wp_nav_menu( array('menu' => 'Main Menu', 'menu_id' => 'nav_options', 'theme_location' => 'main-menu', 'link_before' => '<span class="arrow"></span><span/>' ) ); ?>
+                                <?php else: ?>
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                <span class="arrow"></span>
+                                                This is the Main Menu
+                                            </a>
+                                        </li>
+                                    </ul>
+                                <?php endif; ?>
 							</div>
 
 							<div class="mainColumn">

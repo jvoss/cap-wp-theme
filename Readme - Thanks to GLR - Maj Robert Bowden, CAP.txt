@@ -1,1 +1,0 @@
-A special "Thank you" to Maj Robert Bowden, CAP from GLR on his contributions to the CAP WordPress template.
