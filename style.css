@@ -1,0 +1,62 @@
+/*
+Theme Name: Civil Air Patrol
+Author: Global Reach
+Description:
+Version: 1.0
+*/
+
+h2 a {
+	color: inherit;
+	font-family: inherit;
+	font-size: inherit;
+}
+
+.leftColumn .menu {
+	overflow: hidden;
+}
+
+.leftColumn .menu ul {
+	overflow: hidden;
+}
+
+.leftColumn .menu ul li {
+	float: none;
+}
+
+.leftColumn .menu ul li a {
+	display: block;
+	float: none;
+	margin: 0;
+	padding-left: 18px;
+	position: relative;
+}
+
+.leftColumn .menu > ul > li > a:before {
+	background-image: url( images/ic-arrows.png );
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	content: '';
+	height: 6px;
+	left: 6px;
+	position: absolute;
+	top: 14px;
+	width: 4px;
+}
+
+.leftColumn .menu ul li.current_page_item > a {
+	color: #f6bf22;
+}
+
+.leftColumn .menu ul li ul {
+	border-top: #022c61 solid 2px;
+	display: none;
+}
+
+.leftColumn .menu ul li.current_page_item > ul,
+.leftColumn .menu ul li.current_page_ancestor > ul {
+	display: block;
+}
+
+.leftColumn .menu ul li ul li:last-child {
+	border-bottom: none;
+}
