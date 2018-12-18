@@ -1,5 +1,16 @@
 <?php
 /**
+ * Plugin Update Checking
+ *
+ */
+require 'plugin-update-checker/plugin-update-checker.php';
+$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
+	'https://github.com/jvoss/cap-wp-theme/',
+	__FILE__,
+	'unique-plugin-or-theme-slug'
+);
+
+/**
  * Register dynamic menu areas.
  *
  */
