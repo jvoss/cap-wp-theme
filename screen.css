@@ -96,12 +96,14 @@ body{
 	font-size: 42px;
 	font-family: 'Roboto', Arial, Helvetica, sans-serif;
 	line-height: 32px;
+	width: 350px;
 }
 
 .orgDescription{
 	font-size: 14px;
 	font-weight: bold;
 	display: table-caption;
+	width: 350px;
 }
 
 .servings{
