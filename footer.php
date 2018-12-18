@@ -70,6 +70,11 @@
                             <?php endif; ?>
                             Civil Air Patrol. All rights reserved.
                         </p>
+                        <p>
+                            LINKS OR REFERENCES TO INDIVIDUALS OR COMPANIES DO
+                            NOT CONSTITUTE AN ENDORSEMENT OF ANY INFORMATION OR
+                            SERVICE YOU MAY RECEIVE FROM SUCH SOURCES.
+                        </p>
 					</div>
 					<div class="footerLinks">
 					    <?php if ( has_nav_menu( 'footer-menu' ) ) : ?>
@@ -118,6 +123,11 @@
 			<?php endif; ?>
 
 			Civil Air Patrol. All rights reserved.
+
+			<br/>
+			LINKS OR REFERENCES TO INDIVIDUALS OR COMPANIES DO NOT CONSTITUTE
+			AN ENDORSEMENT OF ANY INFORMATION OR SERVICE YOU MAY RECEIVE FROM
+			SUCH SOURCES.
 		</div>
 
 		<?php wp_footer(); ?>

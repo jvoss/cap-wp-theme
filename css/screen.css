@@ -648,6 +648,7 @@ background: -webkit-linear-gradient(top,  rgba(9,59,120,1) 1%,rgba(39,89,149,1) 
 	line-height: 14px;
 	font-family: "Myriad Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
 	margin:5px 0px 0px 0px;
+	width: 60%;
 }
 
 .footerLinks{
