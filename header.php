@@ -1,6 +1,4 @@
 <!DOCTYPE html>
-<!-- Version 3.4 CAP template update for Group IV, TX, SWR, 28NOV18, 1st Lt Jonathan Voss, CAP  -->
-<!-- Version 3.3 CAP template for UTWG 30Mar17, questions send to rbowden@cap.gov  -->
 <html>
 	<head>
 		<meta charset="utf-8" />
