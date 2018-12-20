@@ -11,16 +11,59 @@ h2 a {
 	font-size: inherit;
 }
 
+.leftColumn ul li {
+	background: rgb(13,58,116); /* Old browsers*/
+	background: -moz-linear-gradient(top,  rgba(13,58,116,1) 1%, rgba(5,50,109,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,rgba(13,58,116,1)), color-stop(100%,rgba(5,50,109,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(13,58,116,1) 1%,rgba(5,50,109,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(13,58,116,1) 1%,rgba(5,50,109,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(13,58,116,1) 1%,rgba(5,50,109,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(13,58,116,1) 1%,rgba(5,50,109,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0d3a74', endColorstr='#05326d',GradientType=0 ); /* IE6-9*/
+}
+
 .leftColumn .menu {
 	overflow: hidden;
 }
 
-.leftColumn .menu ul {
-	overflow: hidden;
+.leftColumn .current-menu-item a .arrow,
+.leftColumn .current-menu-item a{
+	color:#f6bf22;
+	background-position: 0px -6px;
+}
+
+.leftColumn .current-menu-item li a .arrow,
+.leftColumn .current-menu-item li a{
+	color:#fff;
+	background-position: 0px 0px;
 }
 
 .leftColumn .menu ul li {
 	float: none;
+	max-height: 32px;
+}
+
+.leftColumn ul .sub-menu {
+display: none;
+}
+
+.leftColumn ul .sub-menu li:first-child{
+border-top: 2px solid #022c61;
+margin-top: 32px;
+margin-bottom: 0px;
+}
+
+.leftColumn ul .sub-menu li:last-child{
+border-bottom: 0px;
+}
+
+.leftColumn ul .sub-menu li{
+overflow: hidden;
+}
+
+.leftColumn ul .sub-menu li a{
+height: 22px;
+background: #083570;
 }
 
 .leftColumn .menu ul li a {
@@ -32,31 +75,31 @@ h2 a {
 }
 
 .leftColumn .menu > ul > li > a:before {
-	background-image: url( images/ic-arrows.png );
-	background-position: 0px 0px;
-	background-repeat: no-repeat;
-	content: '';
-	height: 6px;
-	left: 6px;
-	position: absolute;
-	top: 14px;
-	width: 4px;
+background-image: url( images/ic-arrows.png );
+background-position: 0px 0px;
+background-repeat: no-repeat;
+content: '';
+height: 6px;
+left: 6px;
+position: absolute;
+top: 14px;
+width: 4px;
 }
 
 .leftColumn .menu ul li.current_page_item > a {
-	color: #f6bf22;
+color: #f6bf22;
 }
 
 .leftColumn .menu ul li ul {
-	border-top: #022c61 solid 2px;
-	display: none;
+border-top: #022c61 solid 2px;
+display: none;
 }
 
 .leftColumn .menu ul li.current_page_item > ul,
 .leftColumn .menu ul li.current_page_ancestor > ul {
-	display: block;
+display: block;
 }
 
 .leftColumn .menu ul li ul li:last-child {
-	border-bottom: none;
+border-bottom: none;
 }

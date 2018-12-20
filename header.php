@@ -10,6 +10,7 @@
 		<link rel="icon" type="image/ico" href="<?php print get_template_directory_uri(); ?>/favicon.ico">
 		<link media="all" type="text/css" href="<?php print get_template_directory_uri(); ?>/style.css" rel="stylesheet">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="<?php print get_template_directory_uri(); ?>/js/accordion-menu.js"></script>
         <!-- Google Analytics -->
         <!-- End Google Analytics -->
     </head>

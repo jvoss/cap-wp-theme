@@ -24,6 +24,7 @@ HTML.
 superior organization.
 
 * All link areas have been converted to menus maintained by WordPress
+    * Side menu supports two level menus
 
 * Converted the slide show to a widget
 
